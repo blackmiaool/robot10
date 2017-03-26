@@ -1,0 +1,24 @@
+{
+  "name": "robot10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackmiaool/robot10.git"
+  },
+  "author": "blackmiaool",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackmiaool/robot10/issues"
+  },
+  "homepage": "https://github.com/blackmiaool/robot10#readme",
+  "dependencies": {
+    "cr-api": "^1.0.3",
+    "fiora-api": "^1.0.0",
+    "optimist": "^0.6.1"
+  }
+}

@@ -1,10 +1,12 @@
 const Cr = require("cr-api");
 const Fiora = require("fiora-api");
+const God=require("blackmiaoolgod-api");
 const argv = require('optimist').argv;
 
 const rooms = {
     cr: new Cr({}),
-    fiora: new Fiora({})
+    fiora: new Fiora({}),
+    god:new God({}),
 };
 
 function eachRoom(cb) {
@@ -24,11 +26,20 @@ function eachOtherRoom(room, cb) {
 function clone(obj) {
     return JSON.parse(JSON.stringify(obj));
 }
+function handleMessage(message){
+    if(message.avatar==="https://ooo.0o0.ooo/2017/03/08/58bf60266acc3.gif"){
+        message.avatar="http://cdn.suisuijiang.com/message_1492395396308.png";
+    }
+}
 eachRoom(function (room) {
     function onMessage(message) {
+        handleMessage(message);
         eachOtherRoom(room, function (r) {
             const msg = clone(message);
             msg.source = room.name;
+            if(msg.name==='robot10'){
+                return;
+            }
             let name = msg.room;
             if (name === room.main) {
                 name = room.name;

@@ -33,6 +33,7 @@ function handleMessage(message){
 }
 eachRoom(function (room) {
     function onMessage(message) {
+       
         handleMessage(message);
         eachOtherRoom(room, function (r) {
             const msg = clone(message);
@@ -46,7 +47,7 @@ eachRoom(function (room) {
             }
             if (name === r.name) {
                 name = r.main;
-            }
+            }           
             r.send(name, "text", JSON.stringify(msg));
         });
     }

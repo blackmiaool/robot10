@@ -33,7 +33,7 @@ function handleMessage(message){
 }
 eachRoom(function (room) {
     function onMessage(message) {
-       
+        console.log('onMessage',onMessage,message)
         handleMessage(message);
         eachOtherRoom(room, function (r) {
             const msg = clone(message);

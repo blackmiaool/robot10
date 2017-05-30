@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/blackmiaool/robot10#readme",
   "dependencies": {
+    "blackmiaoolgod-api": "^1.0.0",
     "cr-api": "^1.0.3",
     "fiora-api": "^1.0.0",
     "optimist": "^0.6.1"
